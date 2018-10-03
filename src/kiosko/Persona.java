@@ -1,13 +1,9 @@
 package kiosko;
 import java.util.Scanner;
 
-/**
- *
- * @author PC
- */
 public class Persona {
-    private String nombre;//atributo privado string
-    private String cuil;//atributo privado string
+    String nombre;//atributo privado string
+    String cuil;//atributo privado string
 
     public void pedirDatos(){//Creamos la operacion pedirDatos
         System.out.println("Ingrese el nombre: ");
