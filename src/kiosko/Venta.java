@@ -9,4 +9,8 @@ public class Venta {
         subtotal = cantidad * precio;
         return subtotal;
     }
+    
+    public void mostrarFactur(){
+        System.out.println("EL TOTAL A PAGAR ES: $" + subtotal);
+    }
 }
