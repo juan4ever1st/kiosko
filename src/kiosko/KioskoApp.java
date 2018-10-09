@@ -39,7 +39,9 @@ public class KioskoApp {
                     break;
                 case 2:
                     vendedor.pedirDatosEmpleado();
+                    cliente.pedirDatosCliente();
                     vendedor.mostrarDatos();
+                    cliente.mostrarDatos();
                     break;
                 case 3:
                     System.out.println("NADA POR AQUI TODAVIA...");
