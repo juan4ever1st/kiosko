@@ -36,16 +36,26 @@ public class KioskoApp {
                     hoy.mostrarFecha();
                     venta1.mostrarFactura();
                     System.out.println("Cod_Art__________Cantidad__________Descripción__________PrecioUnitario");
-                    System.out.println(art1.getCodigo()+art1.getCantidad()+art1.getDescripcion()+art1.getPrecio());
+                    System.out.println(art1.getCodigo()+"          "+art1.getCantidad()+"          "+art1.getDescripcion()+"               "+art1.getPrecio());
                     System.out.println("\n\n");
                     break;
                 }
                 case 2:
                 {
-                    vendedor.pedirDatosEmpleado();
-                    cliente.pedirDatosCliente();
-                    vendedor.mostrarDatos();
-                    cliente.mostrarDatos();
+                    int cantArt = 0;
+                    int respuesta;
+                    do{
+                        System.out.println("DESEA INGRESAR OTRO ARTICULO? 1-SI, 0-NO.");
+                        Scanner resp = new Scanner(System.in);
+                        respuesta = resp.nextInt();
+                        
+                        while(0 != respuesta){
+                            vendedor.pedirDatosEmpleado();
+                            cliente.pedirDatosCliente();
+                            vendedor.mostrarDatos();
+                            cliente.mostrarDatos();
+                        }
+                    }while(0 != respuesta);
                     break;
                 }
                 case 3:
