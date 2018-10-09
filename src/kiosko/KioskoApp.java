@@ -28,12 +28,15 @@ public class KioskoApp {
                     vendedor.pedirDatosEmpleado(); //Llamamamos a la funcion pedirDatos disponible de la clase persona
                     cliente.pedirDatosCliente();
                     art1.pedirArt();
-                    System.out.println("VENDEDOR: ");
+                    System.out.println("\nVENDEDOR: ");
                     vendedor.mostrarDatos(); // Llamamamos a la funcion MostrarDatos disponible de la clase persona
                     venta1.calcularSubtotal(art1.getCantidad(), art1.getPrecio());
+                    System.out.println("\nDATOS CLIENTE:");
                     cliente.mostrarDatos();
                     hoy.mostrarFecha();
                     venta1.mostrarFactura();
+                    System.out.println("Cod_Art__________Cantidad__________Descripción__________PrecioUnitario");
+                    System.out.println(art1.getCodigo()+art1.getCantidad()+art1.getDescripcion()+art1.getPrecio());
                     System.out.println("\n\n");
                     break;
                 }

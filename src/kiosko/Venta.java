@@ -20,7 +20,6 @@ public class Venta {
     }
 
     public void mostrarFactura(){
-        System.out.println("FECHA DE EMISION: " );
         System.out.println("EL TOTAL A PAGAR ES: $" + subtotal);
     }
 }
