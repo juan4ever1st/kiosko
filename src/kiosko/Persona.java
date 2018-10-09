@@ -6,8 +6,8 @@ public class Persona {
     private String cuil;//atributo privado string
 
     Persona() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     //Creamos la operacion pedirDatos para el empleado vendedor
     public void pedirDatosEmpleado(){
         System.out.println("INGRESE SU NOMBRE DE VENDEDOR: ");
@@ -26,7 +26,7 @@ public class Persona {
         Scanner numcuil = new Scanner(System.in);
         this.cuil = numcuil.nextLine();
     }
-    //Creamos la funcion mostraDatos que imprime las variables golbales: nombre y cuil
+    //Creamos la funcion mostraDatos que imprime las variables globales: nombre y cuil
     public void mostrarDatos(){
         System.out.println("NOMBRE: "+nombre);
         System.out.println("CUIL: "+cuil);
