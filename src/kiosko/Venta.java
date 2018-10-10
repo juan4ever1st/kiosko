@@ -20,6 +20,6 @@ public class Venta {
     }
 
     public void mostrarFactura(){
-        System.out.println("EL TOTAL A PAGAR ES: $" + subtotal);
+        System.out.println("EL TOTAL A PAGAR ES:                           $" + subtotal);
     }
 }

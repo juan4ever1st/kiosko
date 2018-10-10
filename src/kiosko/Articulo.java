@@ -10,6 +10,10 @@ public class Articulo {
 
     Articulo() {
     }
+
+    Articulo(int code, int cant, String desc, float price) {
+        
+    }
     
     /**
      *Pedimos los datos del articulo
