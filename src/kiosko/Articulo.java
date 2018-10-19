@@ -12,7 +12,10 @@ public class Articulo {
     }
 
     Articulo(int code, int cant, String desc, float price) {
-        
+        codigo = code;
+        cantidad = cant;
+        descripcion = desc;
+        precio = price;
     }
     
     /**

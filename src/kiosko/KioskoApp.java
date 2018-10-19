@@ -45,26 +45,25 @@ public class KioskoApp {
                 }
                 case 2:
                 {
-                    Articulo array[];
-                    array = new Articulo[100];
-                    int cantArt = 0;
-                    int respuesta;
                     vendedor.pedirDatosEmpleado();
                     cliente.pedirDatosCliente();
                    
-                    System.out.println("INGRESAR ARTICULO? 1-SI, 0-NO.");
-                    Scanner resp = new Scanner(System.in);
-                    respuesta = resp.nextInt();
+                    System.out.println("CUANTOS ARTICULOS DESEA INGRESAR? ");
+                    
+                    Scanner respuesta = new Scanner(System.in);
+                    int cantArt = respuesta.nextInt();
+                    
+                    Articulo array[] = new Articulo[cantArt];
                         
-                    while(0 != respuesta){
-                        int code = art1.getCodigo();
-                        int cant = art1.getCantidad();
-                        String desc = art1.getDescripcion();
-                        float price = art1.getPrecio();
-                        array[cantArt] = new Articulo(code, cant, desc, price);
-                        cantArt = cantArt+1;
-
+                    System.out.println("INGRESE LOS ARTICULOS: \n");
+                    for(int i = 0; i < array.length; i++){    
+                        art1.pedirArt();
+                        array[i] = new Articulo();
                         }
+                    for(int i = 0; i<array.length; i++){
+                        System.out.println("\nArticulo "+ i+1+": "+ array[i].getCodigo()+ array[i].getDescripcion()+array[i].getPrecio()+array[i].getCantidad());
+                    }
+                    
                     System.out.println("****************************************************************************");
                     System.out.println("\nVENDEDOR: ");
                     vendedor.mostrarDatos(); // Llamamamos a la funcion MostrarDatos disponible de la clase persona
