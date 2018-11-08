@@ -10,7 +10,7 @@ public class Venta {
     public float precio;
 
     public float calcularSubtotal(float cantidad, float precio){
-        subtotal = cantidad * precio;
+        subtotal = subtotal + cantidad * precio;
         return subtotal;
     }
     public Venta(){ // Constructor sin parametros

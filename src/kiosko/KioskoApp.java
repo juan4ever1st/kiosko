@@ -56,25 +56,25 @@ public class KioskoApp {
                     Articulo array[] = new Articulo[cantArt];
                         
                     System.out.println("INGRESE LOS ARTICULOS: \n");
-                    for(int i = 0; i < array.length; i++){    
-                        art1.pedirArt();
-                        array[i] = new Articulo();
-                        }
-                    for(int i = 0; i<array.length; i++){
-                        System.out.println("\nArticulo "+ i+1+": "+ array[i].getCodigo()+ array[i].getDescripcion()+array[i].getPrecio()+array[i].getCantidad());
+                    for(int i = 0; i < cantArt; i++){  
+                        Articulo art = new Articulo();
+                        art.pedirArt();
+                        array[i] = art;
                     }
                     
                     System.out.println("****************************************************************************");
                     System.out.println("\nVENDEDOR: ");
                     vendedor.mostrarDatos(); // Llamamamos a la funcion MostrarDatos disponible de la clase persona
-                    venta1.calcularSubtotal(art1.getCantidad(), art1.getPrecio());
                     System.out.println("\nDATOS CLIENTE:");
                     cliente.mostrarDatos();
                     hoy.mostrarFecha();
                     System.out.println("****************************************************************************");
                     System.out.println("                                                                            ");
                     System.out.println("Cod_Art__________Cantidad__________Descripción__________PrecioUnitario");
-                    System.out.println(art1.getCodigo()+"          "+art1.getCantidad()+"          "+art1.getDescripcion()+"               "+art1.getPrecio());
+                    for(int i = 0; i<cantArt; i++){
+                        System.out.println(array[i].getCodigo()+"          "+array[i].getCantidad()+"          "+array[i].getDescripcion()+"               "+array[i].getPrecio());
+                        venta1.calcularSubtotal(array[i].getCantidad(), array[i].getPrecio());
+                    }
                     venta1.mostrarFactura();
                     System.out.println("*****************************************************************************\n\n");
                     break;
